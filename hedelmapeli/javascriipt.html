@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="hedelma.css">
+    <link rel="stylesheet" href="js.js">
+    <title>hedelmäpeli</title>  
+</head>
+<body>
+    <h1 class="center">hedelmäpeli</h1>
+    <div class="center wheat info">
+        <p>Rahat: <span id="rahat">75€</span></p>
+    </div> 
+    <div class ="center wheat info">
+        <p>Panos: <span id="rahat"></span></p>
+
+        <button onclick="aseta_panos(1)"><img src="IMG/euro.png" height="50" width="50"/><h1>1€</h1>
+
+        <button onclick="aseta_panos(1)"><img src="IMG/euro.png" height="50" width="50"/><h1>2€</h1>
+
+        <button onclick="aseta_panos(1)"><img src="IMG/euro.png" height="50" width="50"/><h1>3€</h1>
+    
+        
+    </div>
+        
+          
+    <div class="slots">
+        <span class="IMGcontainer">
+            <img src="IMG/hienov2.png" alt="hienov2 png" style="width: 150px; height:100px; left: 400px"> 
+        </span>
+        <span class="IMGcontainer">
+            <img src="IMG/images.png" alt="images png" style="width: 150px; height:100px; left: 400px">
+        </span>
+        <span class="IMGcontainer">
+            <img src="IMG/kirsikka.png" alt="kirsikka png" style="width: 150px; height: 100px; left: 400px">
+        </span>
+        <span class="IMGcontainer">
+            <img src="IMG/melooni.png" alt= "melooni png" style="width: 150px; height: 100px; left: 400px">
+        </span>
+    </div>
+ 
+    <div class="locks">
+        
+              
+            <div class="IMGcontainer">
+                    <img src="IMG/lcok.png" alt="lock png" style="width:150px;height:100px; left: 400px">
+
+            </span>
+                   <span class="IMGcontainer">
+                    <img src="IMG/lcok.png" alt="lock png" style="width:150px;height:100px; left: 400px">
+                    <span class="IMGcontainer"> 
+                        <img src="IMG/lcok.png" alt="lock png" style="width:150px;height:100px; left: 400px">
+                    </span>
+                   <span class="IMGcontainer"> 
+                    <img src="IMG/lcok.png" alt="lock png" style="width:150px;height:100px; left: 400px">
+
+                   </span>
+            
+         
+              </div>
+
+
+              <body onload="startGame()">
+                
+              
+     </body> 
+     
+    
+     <button onclick="startGame(1)" class="btn">play</button>      
+            
+        
+<script> 
+
+
+    
+    // panos asiat. 
+    
+    var panos=1;
+    var rahat=75; 
+    var myScore=50; 
+    
+
+    var lock1 
+    var lock2 
+    var lock3 
+    var lock4
+
+    
+
+
+    const Game = function() {
+        game.update ();
+      
+        if (rahat < 0) {
+            document.getElementById ('id_error').innerHTML = "rahat on loppu";
+        } 
+        else {
+            document.getElementById('id_error').innerHTML = "";
+        }
+    
+        if  (panos == 1) {
+            rahat = rahat + 2 
+        }
+        else {
+            (panos == 1)
+            rahat = rahat 
+        }
+    } 
+    GamepadButton(); 
+        
+    
+    // lukko systeemi 
+  if (lock2 == true  || lock2 == true || lock3 == true  || lock4 == true){  
+  }
+  if (lock==false){
+      
+
+    document.getElementById ("lock1").src = "IMG/lockv3.png" ;
+    document.getElementById("lock1").disabled = false;
+
+    document.getElementById ("lock2").src = "IMG/lockv3.png" ;
+    document.getElementById("lock2").disabled = false;
+
+      document.getElementById ("lock3").src = "IMG/lockv3.png" ;
+    document.getElementById("lock3").disabled = false;
+
+  document.getElementById ("lock4").src = "IMG/lockv3.png" ;
+  document.getElementById("lock4").disabled = false;
+  }
+  
+  else {document.getElementById ("lock1").src = "IMG/lockv3.png" ;
+  document.getElementById("lock1").disabled = true;
+
+  document.getElementById ("lock2").src = "IMG/lockv3.png" ;
+  document.getElementById("lock2").disabled = true;
+
+  document.getElementById ("lock3").src = "IMG/lockv3.png" ;
+  document.getElementById("lock3").disabled = true;
+
+  document.getElementById ("lock4").src = "IMG/lockv3.png" ;
+  document.getElementById("lock4").disabled = true;}
+
+if (lock1 == true || lock2 == true || lock3 == true || lock4 == true){
+    document.getElementById ("id_error").innerHTML = ("voitit")=(rahat == 1) 
+}
+else (lock1 == false || lock2 == false || lock3 == false || lock4 == false)
+{
+document.getElementById ("id_error").innerHTML = ("hävisit")=(rahat==-1);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+        
+  
+    
+    
+    
+    </div>
+
+    
+
+
+
+</html>
